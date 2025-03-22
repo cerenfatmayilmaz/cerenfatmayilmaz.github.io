@@ -11,17 +11,19 @@
             padding: 0;
             text-align: center;
             background-color: white;
+            font-size: 18px;
         }
         header {
             background: #D8BFD8;
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             position: relative;
+            font-size: 24px;
         }
         nav {
             position: absolute;
-            top: 15px;
+            top: 20px;
             right: 20px;
         }
         nav a {
@@ -30,8 +32,9 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
-            padding: 10px 15px;
+            padding: 12px 18px;
             border-radius: 5px;
+            font-size: 18px;
         }
         .container {
             margin-top: 100px;
@@ -39,47 +42,61 @@
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
+            font-size: 20px;
         }
-        .portfolio {
+        .portfolio, .contact {
             margin-top: 50px;
             padding: 20px;
             background: #D8BFD8;
             border-radius: 10px;
             display: none;
+            font-size: 20px;
         }
-        .portfolio a {
+        .portfolio a, .contact a {
             display: block;
-            margin: 10px 0;
+            margin: 15px 0;
             color: #4B0082;
             font-weight: bold;
             text-decoration: none;
+            font-size: 18px;
         }
     </style>
     <script>
         function showPortfolio() {
             document.getElementById('portfolio').style.display = 'block';
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+        }
+        function showContact() {
+            document.getElementById('contact').style.display = 'block';
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('portfolio').style.display = 'none';
         }
     </script>
 </head>
 <body>
     <header>
-        <h1>WELCOME TO MY PROFESSIONAL WEBSITE</h1>
+        <h1>WELCOME TO MY WEBSITE</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#" onclick="showPortfolio()">Portfolio</a>
-            <a href="mailto:ceren.yilmaz@hacettepe.edu.tr">Contact</a>
+            <a href="#" onclick="showContact()">Contact</a>
         </nav>
     </header>
     <div class="container">
-        <h2>Home</h2>
-        <p>Welcome to my personal website. Stay tuned for updates!</p>
+        <h2>About Me</h2>
+        <p>Hello! My name is Ceren Fatma Yılmaz and I study Electrical and Electronics Engineering at Hacettepe University</p>
     </div>
     <div id="portfolio" class="portfolio">
         <h2>Portfolio</h2>
         <p>Here are my documents:</p>
-        <a href="HW1-Q2[1].docx" download>Download HW1-Q2</a>
+        <a href="HW1-Q2.docx" download>Download HW1-Q2</a>
         <a href="HW1-Q3.docx" download>Download HW1-Q3</a>
         <a href="HW1-Q4.docx" download>Download HW1-Q4</a>
+    </div>
+    <div id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>My e-mail: <a href="mailto:ceren.yilmaz@hacettepe.edu.tr">ceren.yilmaz@hacettepe.edu.tr</a></p>
     </div>
 </body>
 </html>
